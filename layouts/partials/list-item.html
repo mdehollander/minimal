@@ -20,10 +20,12 @@
     <h5>{{ $.Scratch.Get "subtitle" }}</h5>
     {{ range .Params.tags }} <kbd class="item-tag">{{ . }}</kbd> {{ end }}
 
-     {{ if isset .Params "galleria" }}
-  <div class="galleria">
-  {{ range .Params.galleria}}
-  <img src="{{ .imgSrc }}" alt="{{ .imgTitle }}" data-title="{{ .imgTitle }}" data-description="{{ .imgDesc }}">
+     {{ if isset .Params "gallery" }}
+  <div id="lightgallery">
+  {{ range .Params.gallery}}
+  <a href="{{ .imgSrc }}">
+    <img src="{{ .imgSrc }}" />
+  </a>
   {{ end }}
   </div>
   {{ end }}

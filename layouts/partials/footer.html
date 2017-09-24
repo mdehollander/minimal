@@ -1,23 +1,15 @@
-        {{ if .Site.Params.galleria | default false }}
-<script>
-  $(document).ready(function() { 
-    
-    if($(".galleria").length > 0) {
-      Galleria.loadTheme('https://cdnjs.cloudflare.com/ajax/libs/galleria/1.5.7/themes/classic/galleria.classic.min.js');
-      Galleria.configure({
-        idleMode:false
-      });
-      Galleria.run('.galleria');
-    }
-  });
-</script>
-        {{ end }}
-
         <footer>
-
             <p class="copyright text-muted">{{ .Site.Params.copyright | default "&copy; All rights reserved. Powered by [Hugo](https://gohugo.io) and [Minimal](https://github.com/calintat/minimal)" | markdownify }}</p>
 
         </footer>
+
+        {{ if .Site.Params.gallery | default false }}
+    <script type="text/javascript">
+        $(document).ready(function() {
+            $("#lightgallery").lightGallery(); 
+        });
+    </script>
+        {{ end }}
 
     </body>
 
