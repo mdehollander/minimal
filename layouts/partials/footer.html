@@ -4,11 +4,21 @@
         </footer>
 
         {{ if .Site.Params.gallery | default false }}
-    <script type="text/javascript">
-        $(document).ready(function() {
-            $("#lightgallery").lightGallery(); 
-        });
-    </script>
+        <script type="text/javascript">
+            $(document).ready(function() {
+
+                $('#gallery').lightGallery({
+                    thumbnail:true
+                }); 
+
+
+                $('#gallery').justifiedGallery({
+                    rowHeight : 200,
+                    lastRow : 'nojustify',
+                    margins : 3
+                });
+            });
+        </script>
         {{ end }}
 
     </body>

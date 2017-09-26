@@ -21,13 +21,14 @@
     {{ range .Params.tags }} <kbd class="item-tag">{{ . }}</kbd> {{ end }}
 
      {{ if isset .Params "gallery" }}
-  <div id="lightgallery">
-  {{ range .Params.gallery}}
-  <a href="{{ .imgSrc }}">
-    <img src="{{ .imgSrc }}" />
-  </a>
-  {{ end }}
-  </div>
+    <div id="gallery" class="justified-gallery">
+    {{ range .Params.gallery}}
+      <a href="{{ .image }}">
+        <img src="{{ .image }}" />
+      </a>
+    {{ end }}
+    </div>
+
   {{ end }}
 
 </div>
