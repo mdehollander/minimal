@@ -18,8 +18,8 @@
 
     {{ if isset .Params "leaflet" }}
     <div id='leaflet' style="width: 300px; height: 300px"></div>
-    <link rel="stylesheet" href="http:///cdnjs.cloudflare.com/ajax/libs/leaflet/1.2.0/leaflet.css" />
-		<script src="http://cdnjs.cloudflare.com/ajax/libs/leaflet/1.2.0/leaflet.js"></script>
+    <link rel="stylesheet" href="https:///cdnjs.cloudflare.com/ajax/libs/leaflet/1.2.0/leaflet.css" />
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.2.0/leaflet.js"></script>
 
 		<script>
 			var map = L.map('leaflet').setView([{{ $.Param "leaflet.lat" }}, {{ $.Param "leaflet.lon" }}], 10 );
