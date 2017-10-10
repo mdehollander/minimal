@@ -9,7 +9,7 @@
     {{ if isset .Params "gallery" }}
       <div id="gallery" class="justified-gallery">
       {{ range .Params.gallery}}
-        <a href="{{ .image }}">
+        <a href="{{ .image }}" data-sub-html="<h4>{{ .caption }}</h4>">
           <img src="{{ replace .image "/images/uploads" "/images/uploads/thumbnails"}}" />
         </a>
       {{ end }}
